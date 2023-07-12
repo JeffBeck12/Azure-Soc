@@ -131,6 +131,7 @@ By implementing these recommendations, we will enhance our security posture, ach
 
 Section 1: Identify the type of attack that may have caused this 
 network interruption
+
 After reviewing the logs in my opinion the website is being Dos attacked. The server is being bombarded with SYN requests causing the server to stop responding. This could be what is called a SYN attack.
  
 
