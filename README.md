@@ -151,6 +151,22 @@ acknowledging the permission to connect.
 A SYN flood attack simulates a TCP connection and floods the server with SYN packets. The attacker floods the target server with a high volume of SYN requests, overwhelming its resources and causing a disruption in normal operations.
 Initially, the attacker’s SYN request is answered normally by the web server (log items 52-54). However, the attacker keeps sending more SYN requests. The log begins to reflect the struggle the web server is having to keep up with the abnormal number of SYN requests coming in at a rapid pace. The attacker is sending several SYN requests every second. Eventually the Server  stopped responding to  legitimate employee visitor traffic.
 
+## CyberSecurity Incident Reports Network Traffic Analysis
+
+Part 1: Provide a summary of the problem found in the DNS and ICMP 
+traffic log
+
+The network protocol analyzer shows that when you send UDP packets and receive an ICMP response returned to your host, the results contain an error message: “udp port 53 unreachable.” Port 53 is used for DNS (Domain Name System) services. DNS is responsible for translating human-readable domain names, like yummyrecipesforme.com, into IP addresses that computers use to communicate over a network. This could be intentional to restrict DNS access or unintentional due to misconfigurations using the Firewall. It could also be the result of a DDOS because of the amount of times the error occurred.
+
+ 
+
+Part 2: Explain your analysis of the data and provide one solution to implement
+
+The incident occurred between 1:24pm est  and 1:28pm est when several customers contacted us to report that they were not able to access the company website, and saw the error “destination port unreachable” after waiting for the page to load. I loaded my network analyzer tool, tcpdump, and loaded the webpage again.the results contain an error message: “udp port 53 unreachable.” We are continuing to investigate the root cause of the issue to determine how we can restore access to the website. Our next steps are to configure the firewall and block ips with X number of attempts. Contact our  Internet Service Provider (ISP) or hosting provider and inform them about the ongoing DDoS attack to assist with traffic filtering or diverting malicious traffic away from your network.
+
+
+
+
 
 
 ## Conclusion
