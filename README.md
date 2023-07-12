@@ -136,6 +136,7 @@ After reviewing the logs in my opinion the website is being Dos attacked. The se
  
 
 Section 2: Explain how the attack is causing the website to malfunction
+
 When the website visitors try to establish a connection with the web server, a
 three-way handshake occurs using the TCP protocol. The handshake consists
 of three steps:
