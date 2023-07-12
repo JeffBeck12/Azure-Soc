@@ -126,6 +126,30 @@ Address the additional findings by implementing time-controlled safes, ensuring 
 By implementing these recommendations, we will enhance our security posture, achieve compliance, and establish a robust cybersecurity framework to protect our critical assets and ensure business continuity.
 
 
+## CyberSecurity Incident Reports 
+
+
+Section 1: Identify the type of attack that may have caused this 
+network interruption
+After reviewing the logs in my opinion the website is being Dos attacked. The server is being bombarded with SYN requests causing the server to stop responding. This could be what is called a SYN attack.
+ 
+
+Section 2: Explain how the attack is causing the website to malfunction
+When the website visitors try to establish a connection with the web server, a
+three-way handshake occurs using the TCP protocol. The handshake consists
+of three steps:
+1. A SYN packet is sent from the source to the destination, requesting to
+connect.
+2. The destination replies to the source with a SYN-ACK packet to accept
+the connection request. The destination will reserve resources for the
+source to connect.
+3. A final ACK packet is sent from the source to the destination
+acknowledging the permission to connect.
+
+A SYN flood attack simulates a TCP connection and floods the server with SYN packets. The attacker floods the target server with a high volume of SYN requests, overwhelming its resources and causing a disruption in normal operations.
+Initially, the attacker’s SYN request is answered normally by the web server (log items 52-54). However, the attacker keeps sending more SYN requests. The log begins to reflect the struggle the web server is having to keep up with the abnormal number of SYN requests coming in at a rapid pace. The attacker is sending several SYN requests every second. Eventually the Server  stopped responding to  legitimate employee visitor traffic.
+
+
 
 ## Conclusion
 
